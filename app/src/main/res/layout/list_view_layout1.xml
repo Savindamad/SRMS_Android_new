@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Meal name"
+        android:id="@+id/tvMealName1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="00"
+        android:id="@+id/tvMealCode1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        android:textAlignment="textEnd" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Meal description"
+        android:id="@+id/tvMealDes1"
+        android:layout_below="@+id/tvMealName1"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="5dp" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="65dp"
+        android:layout_height="27dp"
+        android:id="@+id/bRemove"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/remove_button" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="80dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="5dp">
+
+        <EditText
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:inputType="numberSigned"
+            android:ems="10"
+            android:id="@+id/etItemQty"
+            android:background="#f2f2f2"
+            android:text="1"
+            android:textAlignment="textEnd"
+            android:layout_marginRight="1dp"
+            android:layout_marginTop="2dp" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:text="+"
+            android:id="@+id/bPlus"
+            android:textAlignment="center"
+            android:textSize="14dp"
+            android:background="#bdbdbd"
+            android:layout_marginRight="1dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:text="-"
+            android:id="@+id/bMinus"
+            android:textAlignment="center"
+            android:textSize="14dp"
+            android:background="#bdbdbd"
+            android:textColor="#ffffff"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_user_area"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.smart_rms.group12.smartrms.UserArea"
+    android:background="?attr/colorControlHighlight">
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:id="@+id/InfoRL"
+        android:background="@color/common_google_signin_btn_text_dark_default">
+
+        <ImageView
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/ProfPic"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/profile" />
+
+        <TextView
+            android:text="Saman Kumar"
+            android:textSize="22dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/NameTV"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/ProfPic"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="15dp" />
+
+        <TextView
+            android:text="Waiter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/NameTV"
+            android:layout_toEndOf="@+id/ProfPic"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="11dp"
+            android:id="@+id/EmployeeTypeTV"
+            android:layout_marginLeft="15dp"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:text="Place an order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/InfoRL"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/GoBtn"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:onClick="PlaceAnOrder"
+        android:background="@drawable/button_style1"
+        android:textColor="#ffffff"
+        android:textColorLink="?android:attr/colorPrimary"
+        android:textSize="18sp" />
+
+    <Button
+        android:text="View menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/GoBtn"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ViewMenuBtn"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:onClick="ViewMenu"
+        android:background="@drawable/button_style1"
+        android:textColor="#ffffff"
+        android:textColorLink="?android:attr/colorPrimary"
+        android:textSize="18sp" />
+
+    <Button
+        android:text="Notify cleaner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ViewMenuBtn"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/HelpBtn"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:onClick="ViewMenu"
+        android:background="@drawable/button_style1"
+        android:textColor="#ffffff"
+        android:textColorLink="?android:attr/colorPrimary"
+        android:textSize="18sp" />
+
+    <Button
+        android:text="Logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/LogoutBtn"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:onClick="Logout"
+        android:background="@drawable/button_style3"
+        android:textColor="#000000"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>

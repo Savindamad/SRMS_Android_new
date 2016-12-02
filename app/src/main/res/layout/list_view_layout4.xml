@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:text="Order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/OrderTv"
+        android:textSize="20sp"
+        android:textColorLink="?android:attr/colorPrimary"
+        tools:textStyle="bold" />
+
+    <TextView
+        android:text="01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/OrderTv"
+        android:id="@+id/OrderTv"
+        android:textSize="20sp"
+        android:textColorLink="?android:attr/colorPrimary"
+        tools:textStyle="bold"
+        android:layout_marginLeft="5dp" />
+
+    <Button
+        android:layout_below="@+id/OrderTv"
+        android:layout_alignParentStart="true"
+        android:id="@+id/ViewOrderBtn"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/view_button"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp" />
+
+    <Button
+        android:layout_alignTop="@+id/ViewOrderBtn"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/CancelOrderBtn"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/cancel_button"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="5dp" />
+</RelativeLayout>

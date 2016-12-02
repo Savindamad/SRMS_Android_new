@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_table_type1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.smart_rms.group12.smartrms.TableType1">
+
+    <Button
+        android:text="Table5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/T1Table5Btn"
+        android:background="@drawable/button_style1"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:elevation="0dp"
+        android:layout_marginBottom="5dp" />
+
+    <Button
+        android:text="Table4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/T1Table5Btn"
+        android:layout_alignStart="@+id/T1Table5Btn"
+        android:id="@+id/T1Table4Btn"
+        android:background="@drawable/button_style1"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:layout_marginBottom="5dp" />
+
+    <Button
+        android:text="Table3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/T1Table4Btn"
+        android:layout_alignStart="@+id/T1Table4Btn"
+        android:id="@+id/T1Table3Btn"
+        android:background="@drawable/button_style1"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:layout_marginBottom="5dp" />
+
+    <Button
+        android:text="Table2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/T1Table3Btn"
+        android:layout_alignStart="@+id/T1Table3Btn"
+        android:id="@+id/T1Table2Btn"
+        android:background="@drawable/button_style1"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:layout_marginBottom="5dp" />
+
+    <Button
+        android:text="Table1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/T1Table2Btn"
+        android:layout_alignStart="@+id/T1Table2Btn"
+        android:id="@+id/T1Table1Btn"
+        android:background="@drawable/button_style1"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:layout_marginBottom="5dp" />
+
+    <Button
+        android:text="Table6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/T1Table5Btn"
+        android:layout_alignStart="@+id/T1Table5Btn"
+        android:id="@+id/T1Table6Btn"
+        android:background="@drawable/button_style1"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:layout_marginBottom="5dp" />
+
+    <Button
+        android:text="Table7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/T1Table6Btn"
+        android:layout_alignStart="@+id/T1Table6Btn"
+        android:id="@+id/T1Table7Btn"
+        android:background="@drawable/button_style1"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:layout_marginBottom="5dp" />
+
+    <Button
+        android:text="Table8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/T1Table7Btn"
+        android:layout_alignStart="@+id/T1Table7Btn"
+        android:id="@+id/T1Table8Btn"
+        android:background="@drawable/button_style1"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:layout_marginBottom="5dp" />
+
+</RelativeLayout>

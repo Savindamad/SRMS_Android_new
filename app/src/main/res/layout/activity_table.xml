@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_table"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.smart_rms.group12.smartrms.Table">
+
+    <Button
+        android:text="View menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ViewMenuBtn"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_style1"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:onClick="ViewMenu1"/>
+
+    <Button
+        android:text="Edit and cancel order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ViewMenuBtn"
+        android:id="@+id/EditAndCancelBtn"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_style1"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:onClick="EditAndCancel"/>
+
+    <Button
+        android:text="Add new order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/EditAndCancelBtn"
+        android:id="@+id/AddNewOrderBtn"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_style1"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:onClick="AddNewOrder"/>
+
+    <Button
+        android:text="Notify to the cleaer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ViewMenuBtn"
+        android:id="@+id/NotifyToCleanerBtn"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button_style1"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:onClick="NotifyCleaner"/>
+
+    <Button
+        android:text="Back to Reservation tables"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/BackBtn3"
+        android:background="@drawable/button_style2"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:onClick="FinishOrder"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Finish order"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/FinishOrderBtn"
+        android:background="@drawable/button_style6"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:onClick="FinishOrder"
+        android:layout_above="@+id/BackBtn3"
+        android:layout_marginBottom="10dp" />
+
+</RelativeLayout>

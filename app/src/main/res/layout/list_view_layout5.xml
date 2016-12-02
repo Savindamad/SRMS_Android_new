@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:text="Order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/OrderTv"
+        android:textSize="20sp"
+        android:textStyle="normal|bold"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp" />
+
+    <TextView
+        android:text="01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/OrderTv"
+        android:id="@+id/OrderNoTv"
+        android:layout_marginLeft="10dp"
+        android:textSize="20sp"
+        android:textStyle="normal|bold"
+        android:layout_marginTop="15dp" />
+
+    <Button
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/ViewOrderBtn1"
+        android:background="@drawable/view_button"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="10dp" />
+
+    <TextView
+        android:text="Order is accepted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/OrderTv"
+        android:layout_alignParentStart="true"
+        android:id="@+id/StatusTv"
+        android:layout_marginLeft="10dp" />
+
+</RelativeLayout>

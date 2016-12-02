@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_table_types"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.smart_rms.group12.smartrms.TableTypes">
+
+    <Button
+        android:text="Reservation Table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/Table2Btn"
+        android:onClick="TableType2"
+        android:background="@drawable/button_style1"
+        android:textColor="#ffffff"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:text="Dining Room"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Table2Btn"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/Table3Btn"
+        android:onClick="TableType3"
+        android:background="@drawable/button_style1"
+        android:textColor="#ffffff"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:text="Regular Tables"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Table2Btn"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/Table1Btn"
+        android:onClick="TableType1"
+        android:background="@drawable/button_style1"
+        android:textColor="#ffffff"
+        android:layout_marginTop="10dp" />
+
+    <Button
+        android:text="Back to table types"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/BackBtn4"
+        android:background="@drawable/button_style2"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:onClick="FinishOrder"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

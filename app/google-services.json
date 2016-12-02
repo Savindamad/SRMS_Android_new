@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "870756228194",
+    "firebase_url": "https://smart-rms.firebaseio.com",
+    "project_id": "smart-rms",
+    "storage_bucket": "smart-rms.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:870756228194:android:1d4e9a074f0db9d6",
+        "android_client_info": {
+          "package_name": "com.smart_rms.group12.smartrms"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "870756228194-9n4j19q2hologfvpo8cps51tru2j75c7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGWSOPUyP67f29LjAieJtiPObGIL5dIDU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
