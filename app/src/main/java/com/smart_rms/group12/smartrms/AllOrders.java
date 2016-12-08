@@ -3,6 +3,7 @@ package com.smart_rms.group12.smartrms;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,6 +30,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import Beans.DB;
 import Beans.MenuItems;
 import Beans.Order;
 import Beans.OrderItem;
@@ -47,17 +49,25 @@ public class AllOrders extends AppCompatActivity {
 
     ArrayList<Order> orderArray = new ArrayList<>();
 
+    DB database;
+    SQLiteDatabase sqLiteDatabase;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_all_orders);
+
+        database = new DB(getApplicationContext());
+        sqLiteDatabase = database.getReadableDatabase();
+
         requestQueue = Volley.newRequestQueue(this);
         list = (ListView)findViewById(R.id.OrderListView);
         adapter = new AllOrders.MyListAdapter();
 
         Intent prIntent = getIntent();
         tableNo = prIntent.getStringExtra("tableNo");
-        menu = (ArrayList<MenuItems>)prIntent.getSerializableExtra("menu");
+        menu = database.getMenu(sqLiteDatabase);
+        //menu = (ArrayList<MenuItems>)prIntent.getSerializableExtra("menu");
         user = (User) prIntent.getSerializableExtra("user");
         getOrders();
     }

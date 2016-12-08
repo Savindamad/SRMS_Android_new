@@ -1,12 +1,13 @@
 package com.smart_rms.group12.smartrms;
 
 import android.app.AlertDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.net.Uri;
+import android.content.SharedPreferences;
+import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.View;
 import android.widget.EditText;
 
@@ -18,10 +19,6 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-import com.google.android.gms.appindexing.Action;
-import com.google.android.gms.appindexing.AppIndex;
-import com.google.android.gms.appindexing.Thing;
-import com.google.android.gms.common.api.GoogleApiClient;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -31,6 +28,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import Beans.DB;
 import Beans.MenuItems;
 import Beans.User;
 
@@ -49,17 +47,35 @@ public class Login extends AppCompatActivity {
 
     ArrayList<MenuItems> menu = new ArrayList<>();
     User user;
+    DB database;
+    SQLiteDatabase sqLiteDatabase;
+    SQLiteDatabase sqLiteDatabase1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        database = new DB(this);
+        sqLiteDatabase = database.getWritableDatabase();
+        sqLiteDatabase1 = database.getReadableDatabase();
+
 
         username = (EditText) findViewById(R.id.UsernameET);
         password = (EditText) findViewById(R.id.PasswordET);
 
         requestQueue = Volley.newRequestQueue(this);
         requestQueue1 = Volley.newRequestQueue(this);
+
+        user = database.getUser(sqLiteDatabase1);
+        if(user!=null){
+            if(user.getType().equals("WAITER")){
+                getMenu();
+            }
+            else if(user.getType().equals("CLEANER")){
+                Intent intent = new Intent(Login.this, UserArea1.class);
+                startActivity(intent);
+            }
+        }
     }
 
     public void Login(View view) {
@@ -80,17 +96,16 @@ public class Login extends AppCompatActivity {
                             String type = jsonObject.getString("user_type");
 
                             user = new User(fname,lname,userID,type);
-
+                            database.setUser(user,sqLiteDatabase);
                             if (type.equals("WAITER")) {
                                 getMenu();
                                  //start user area activity
                             }
                             else if (type.equals("CLEANER")){
-                                PopUpMsg("success","c");
                                 Intent intent = new Intent(Login.this, UserArea1.class);
-                                intent.putExtra("user",user);
                                 username.setText("");
                                 password.setText("");
+                                startActivity(intent);
                             }
                             else {
                                 //invalid user
@@ -154,9 +169,10 @@ public class Login extends AppCompatActivity {
                         menu.add(new MenuItems(itemCode,itemName,itemType,itemDescription,itemPrice));
 
                     }
+                    database.addMenuItem(menu,sqLiteDatabase);
                     Intent intent = new Intent(Login.this, UserArea.class);
-                    intent.putExtra("user",user);
-                    intent.putExtra("menu",menu);
+                    //intent.putExtra("user",user);
+                    //intent.putExtra("menu",menu);
                     username.setText("");
                     password.setText("");
 

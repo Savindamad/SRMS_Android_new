@@ -20,7 +20,8 @@
         android:onClick="TableType2"
         android:background="@drawable/button_style1"
         android:textColor="#ffffff"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"/>
 
     <Button
         android:text="Dining Room"
@@ -32,7 +33,8 @@
         android:onClick="TableType3"
         android:background="@drawable/button_style1"
         android:textColor="#ffffff"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"/>
 
     <Button
         android:text="Regular Tables"
@@ -44,7 +46,8 @@
         android:onClick="TableType1"
         android:background="@drawable/button_style1"
         android:textColor="#ffffff"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"/>
 
     <Button
         android:text="Back to table types"

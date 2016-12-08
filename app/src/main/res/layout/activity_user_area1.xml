@@ -14,8 +14,9 @@
 
     <RelativeLayout android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#ffffff"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="10dp"
+        android:id="@+id/InfoRL"
+        android:background="@color/common_google_signin_btn_text_dark_default">
 
         <ImageView
             android:layout_width="70dp"
@@ -25,24 +26,24 @@
             android:id="@+id/ProfPic"
             android:layout_marginTop="20dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginBottom="20dp" />
+            android:src="@drawable/profile" />
 
         <TextView
             android:text="Saman Kumar"
             android:textSize="22dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/NameTV"
+            android:id="@+id/Name1TV"
             android:layout_alignParentTop="true"
             android:layout_toEndOf="@+id/ProfPic"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="15dp" />
 
         <TextView
-            android:text="TextView"
+            android:text="Cleaner"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/NameTV"
+            android:layout_below="@+id/Name1TV"
             android:layout_toEndOf="@+id/ProfPic"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="11dp"
@@ -52,6 +53,51 @@
             android:layout_marginTop="10dp" />
 
     </RelativeLayout>
+
+    <Button
+        android:text="View work history"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/InfoRL"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ViewHistoryBtn"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:onClick="PendingWork"
+        android:background="@drawable/button_style1"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:elevation="0dp" />
+
+    <Button
+        android:text="View pending "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ViewHistoryBtn"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/ViewPendingBtn"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:onClick="ViewHistory"
+        android:background="@drawable/button_style1"
+        android:textColor="#ffffff"
+        android:textSize="18sp" />
+
+    <Button
+        android:text="Logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/LogoutBtn"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:onClick="Logout"
+        android:background="@drawable/button_style3"
+        android:textColor="#000000"
+        android:textSize="18sp" />
 
 
 </RelativeLayout>

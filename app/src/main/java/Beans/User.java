@@ -31,4 +31,8 @@ public class User implements Serializable {
         return userID;
     }
 
+    public String getType(){
+        return type;
+    }
+
 }

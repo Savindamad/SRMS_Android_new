@@ -3,6 +3,7 @@ package com.smart_rms.group12.smartrms;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -35,6 +36,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Map;
 
+import Beans.DB;
 import Beans.MenuItems;
 import Beans.Order;
 import Beans.User;
@@ -43,6 +45,9 @@ public class AddNewOrder extends AppCompatActivity {
 
     User user;
     String tableNo;
+
+    DB database;
+    SQLiteDatabase sqLiteDatabase;
 
     private ArrayList<MenuItems> menu = new ArrayList<MenuItems>();
     private List<MenuItems> menuTemp = new ArrayList<MenuItems>();
@@ -67,6 +72,9 @@ public class AddNewOrder extends AppCompatActivity {
         requestQueue = Volley.newRequestQueue(this);
         requestQueue1 = Volley.newRequestQueue(this);
 
+        database = new DB(getApplicationContext());
+        sqLiteDatabase = database.getReadableDatabase();
+
         TabHost tab = (TabHost)findViewById(R.id.tabHost);
         tab.setup();
 
@@ -90,7 +98,8 @@ public class AddNewOrder extends AppCompatActivity {
         Intent prIntent = getIntent();
         user =(User)prIntent.getSerializableExtra("user");
         tableNo = prIntent.getStringExtra("tableNo");
-        menu = (ArrayList<MenuItems>)prIntent.getSerializableExtra("menu");
+        menu = database.getMenu(sqLiteDatabase);
+        //menu = (ArrayList<MenuItems>)prIntent.getSerializableExtra("menu");
         menuTemp.addAll(menu);
 
 

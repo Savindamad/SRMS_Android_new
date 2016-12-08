@@ -39,7 +39,7 @@ import Beans.*;
 public class Table extends AppCompatActivity {
 
     User user;
-    ArrayList<MenuItems> menu = new ArrayList<>();
+    //ArrayList<MenuItems> menu = new ArrayList<>();
     String tableNo;
 
     StringRequest request;
@@ -56,7 +56,7 @@ public class Table extends AppCompatActivity {
         requestQueue = Volley.newRequestQueue(this);
 
         Intent prIntent = getIntent();
-        menu = (ArrayList<MenuItems>)prIntent.getSerializableExtra("menu");
+        //menu = (ArrayList<MenuItems>)prIntent.getSerializableExtra("menu");
         user = (User) prIntent.getSerializableExtra("user");
         tableNo = prIntent.getStringExtra("tableNo");
 
@@ -65,7 +65,7 @@ public class Table extends AppCompatActivity {
     public void AddNewOrder(View view) {
         Intent intent = new Intent(Table.this,AddNewOrder.class);
         intent.putExtra("user",user);
-        intent.putExtra("menu",menu);
+        //intent.putExtra("menu",menu);
         intent.putExtra("tableNo",tableNo);
         startActivity(intent);
     }
@@ -74,7 +74,7 @@ public class Table extends AppCompatActivity {
         Intent intent = new Intent(Table.this,AllOrders.class);
         intent.putExtra("user",user);
         intent.putExtra("tableNo",tableNo);
-        intent.putExtra("menu",menu);
+        //intent.putExtra("menu",menu);
         startActivity(intent);
     }
 
@@ -92,7 +92,7 @@ public class Table extends AppCompatActivity {
                     //JSONObject jsonObject = new JSONObject(response);
                     Intent intent = new Intent(Table.this, TableTypes.class);
                     intent.putExtra("user",user);
-                    intent.putExtra("menu",menu);
+                    //intent.putExtra("menu",menu);
                     startActivity(intent);
 
             }

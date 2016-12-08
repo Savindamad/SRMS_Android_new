@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">SmartRMS</string>
+    <string name="FCM_PREF">com.smart_rms.group12.smartrms.fcm_pref</string>
+    <string name="FCM_TOKEN">com.smart_rms.group12.smartrms.fcm_token</string>
+    <string name="USER">user</string>
+    <string name="USER_ID">userID</string>
+    <string name="F_NAME">fname</string>
+    <string name="L_NAME">lname</string>
+    <string name="TYPE">type</string>
 </resources>

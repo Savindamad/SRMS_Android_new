@@ -32,7 +32,7 @@ import Beans.*;
 
 public class TableType1 extends AppCompatActivity {
 
-    ArrayList<MenuItems> menu = new ArrayList<>();
+    //ArrayList<MenuItems> menu = new ArrayList<>();
     User user;
     URL url = new URL("getTableInfo.php");
     URL url1 = new URL("checkTable.php");
@@ -58,7 +58,7 @@ public class TableType1 extends AppCompatActivity {
         setContentView(R.layout.activity_table_type1);
 
         Intent prIntent = getIntent();
-        menu = (ArrayList<MenuItems>)prIntent.getSerializableExtra("menu");
+        //menu = (ArrayList<MenuItems>)prIntent.getSerializableExtra("menu");
         user = (User) prIntent.getSerializableExtra("user");
 
         requestQueue = Volley.newRequestQueue(this);
@@ -171,7 +171,7 @@ public class TableType1 extends AppCompatActivity {
     public void selectTable(String tableNo){
         Intent intent = new Intent(TableType1.this,Table.class);
         intent.putExtra("user",user);
-        intent.putExtra("menu",menu);
+        //intent.putExtra("menu",menu);
         intent.putExtra("tableNo",tableNo);
         startActivity(intent);
     }

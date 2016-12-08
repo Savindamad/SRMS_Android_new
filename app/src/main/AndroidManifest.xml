@@ -37,8 +37,22 @@
         <activity android:name=".NewOrderTab1" />
         <activity android:name=".NewOrderTab2" />
         <activity android:name=".AllOrders" />
-        <activity android:name=".ViewAndCancel"></activity>
+        <activity android:name=".ViewAndCancel" />
 
+        <service android:name=".FcmInstanceIdService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".FcmMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".SendMessageToCleaner" />
+        <activity android:name=".ViewHistory" />
+        <activity android:name=".PendingWork"></activity>
     </application>
 
 </manifest>
