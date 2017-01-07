@@ -67,8 +67,9 @@ public class AllOrders extends AppCompatActivity {
         Intent prIntent = getIntent();
         tableNo = prIntent.getStringExtra("tableNo");
         menu = database.getMenu(sqLiteDatabase);
+        user = database.getUser(sqLiteDatabase);
         //menu = (ArrayList<MenuItems>)prIntent.getSerializableExtra("menu");
-        user = (User) prIntent.getSerializableExtra("user");
+        //user = (User) prIntent.getSerializableExtra("user");
         getOrders();
     }
     public void getOrders(){

@@ -7,11 +7,18 @@ import com.android.volley.Response;
  */
 
 public class URL{
-    String url = "http://192.168.1.2/smart_rms/";
+    static String ip = "192.168.1.5";
+    String url = "http://192.168.1.3/smart_rms/";
     URL(String name){
         url+=name;
     }
     public String getUrl() {
         return url;
+    }
+    public void setIp(String ip){
+        this.ip=ip;
+    }
+    public String getIp(){
+        return ip;
     }
 }

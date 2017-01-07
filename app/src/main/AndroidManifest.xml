@@ -52,7 +52,9 @@
 
         <activity android:name=".SendMessageToCleaner" />
         <activity android:name=".ViewHistory" />
-        <activity android:name=".PendingWork"></activity>
+        <activity android:name=".PendingWork" />
+        <activity android:name=".ChangeIpAddress" />
+        <activity android:name=".NotifyToCleaner"></activity>
     </application>
 
 </manifest>

@@ -14,7 +14,6 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
@@ -27,9 +26,10 @@ import java.util.Map;
 import Beans.DB;
 import Beans.User;
 
-public class SendMessageToCleaner extends AppCompatActivity {
+public class NotifyToCleaner extends AppCompatActivity {
 
     User user;
+    String tableNo;
 
     EditText message;
     URL url = new URL("sendMessage.php");
@@ -44,7 +44,10 @@ public class SendMessageToCleaner extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_send_message_to_cleaner);
+        setContentView(R.layout.activity_notify_to_cleaner);
+
+        Intent prIntent = getIntent();
+        tableNo = prIntent.getStringExtra("tableNo");
 
         database = new DB(getApplicationContext());
         sqLiteDatabase = database.getReadableDatabase();
@@ -54,11 +57,11 @@ public class SendMessageToCleaner extends AppCompatActivity {
 
         requestQueue = Volley.newRequestQueue(this);
 
-        message = (EditText) findViewById(R.id.MessageET);
+        message = (EditText) findViewById(R.id.NotificationMsgEt);
     }
 
-    public void BackToMainMenu(View view) {
-        Intent intent = new Intent(SendMessageToCleaner.this,UserArea.class);
+    public void BackToTable(View view) {
+        Intent intent = new Intent(NotifyToCleaner.this,Table.class);
         startActivity(intent);
     }
 
@@ -95,7 +98,7 @@ public class SendMessageToCleaner extends AppCompatActivity {
                     HashMap<String, String> hashMap = new HashMap<String, String>();
                     hashMap.put("user_id",user.getUserID());
                     hashMap.put("message",message.getText().toString());
-                    hashMap.put("table_no","0");
+                    hashMap.put("table_no",tableNo);
                     return hashMap;
                 }
             };
@@ -108,7 +111,7 @@ public class SendMessageToCleaner extends AppCompatActivity {
     }
 
     public void PopUpMsg(String title,String msg) {
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(SendMessageToCleaner.this);
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(NotifyToCleaner.this);
 
         // set title
         alertDialogBuilder.setTitle(title);

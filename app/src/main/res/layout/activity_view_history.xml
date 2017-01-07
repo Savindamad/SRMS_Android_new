@@ -10,4 +10,23 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.smart_rms.group12.smartrms.ViewHistory">
 
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/workHistoryLv"
+        android:layout_above="@+id/BackToMainMenuBtn3"/>
+    <Button
+        android:text="Back to main menu"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/BackToMainMenuBtn3"
+        android:background="@drawable/button_style2"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:onClick="BackToMainMenu"/>
+
 </RelativeLayout>

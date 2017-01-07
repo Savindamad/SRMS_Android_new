@@ -1,10 +1,8 @@
 package com.smart_rms.group12.smartrms;
 
 import android.app.AlertDialog;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -179,14 +177,14 @@ public class Login extends AppCompatActivity {
                     startActivity(intent);
 
                 } catch (JSONException e) {
-                    PopUpMsg("Login fail","Network error..");
+                    PopUpMsg("Login fail","Network error("+e+")");
                     e.printStackTrace();
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                PopUpMsg("Login fail","Network error..");
+                PopUpMsg("Login fail","Network error("+error+")");
             }
         });
         requestQueue1.add(jsonObjectRequest);
@@ -224,5 +222,4 @@ public class Login extends AppCompatActivity {
         // show it
         alertDialog.show();
     }
-
 }

@@ -82,6 +82,10 @@ public class Table extends AppCompatActivity {
     }
 
     public void NotifyCleaner(View view) {
+        Intent intent = new Intent(Table.this,AllOrders.class);
+        intent.putExtra("tableNo",tableNo);
+        //intent.putExtra("menu",menu);
+        startActivity(intent);
     }
 
     public void FinishOrder(View view) {
